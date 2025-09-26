@@ -6,12 +6,11 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage {
     private WebDriver driver;
 
-    private By userIdInput = By.id("formEmail");    // adjust locator if different
+    private By userIdInput = By.id("formEmail");    
     private By passwordInput = By.id("formPassword");
     private By loginButton = By.xpath("//button[@type='submit']");
     private By passwordToggle = By.xpath("//img[@alt='Password Not Visible']");
-    private By errorMsg = By.xpath("//p[contains(.,'Error')]"); // adjust locator
-    //private By pageTitle = By.tagName("title");
+    private By errorMsg = By.xpath("//p[contains(.,'Error')]"); 
 
     // Constructor
     public LoginPage(WebDriver driver) {
@@ -36,7 +35,7 @@ public class LoginPage {
     }
 
     public String getPasswordType() {
-        return driver.findElement(passwordInput).getAttribute("type"); // "password" or "text"
+        return driver.findElement(passwordInput).getAttribute("type"); 
     }
 
     public void togglePasswordVisibility() {
